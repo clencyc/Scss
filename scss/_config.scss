@@ -1,0 +1,28 @@
+$light-color: #f4f4f4;
+$font-stack: Arial, Helvetica, sans-serif;
+
+// Define the primary and secondary colors
+$primary-color: black;  // Example value
+$secondary-color: #ff6347;  // Example value
+
+//  Set text color based on bg
+@function set-text-color($color) {
+    @if (lightness($color) > 50 ){
+        @return #000;
+    } @else {
+        @return #fff;
+
+    }
+    @return if(lightness($color) > 50%, #000, #fff);
+}
+
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+// Set background & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}

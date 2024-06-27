@@ -1,0 +1,22 @@
+@mixin btn-bg($btn-color: #066233) {
+    background-color: $btn-color;
+    height: 30px;
+    weight: 100px;
+    color: white;
+
+}
+
+.overrall
+{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 10px;
+    color: #0cf17b;
+    font-weight: 600;
+    border-radius: 10px;
+    width: max-content;
+}
+

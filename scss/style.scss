@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import '../buttons/button';
+@import '../responsiveness/responsive';
+@import '../header/header';
+@import '../footer/footer';
+
+$primaryBtn : #066233;
+$textColor: Black;
+$border-color: #066233;
+$font-stack:  Helvetica, sans-serif;
+$background: white;
+// @import "./header";
+// @import "./variables";
+html
+{
+    scroll-behavior: smooth;
+}
+
+@mixin card($background: white, $border-color: #066233, $padding: 10px) {
+    background-color: $background;
+    border: 1px solid $border-color;
+    color: $textColor;
+    padding: 10px;
+    display: block;
+    border-radius: 3px;
+    width: 250px;
+    height: 250px;
+    box-shadow: black;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+                0 1px 18px 0 rgba(0, 0, 0, 0.12),
+                0 3px 5px -1px rgba(0, 0, 0, 0.4)
+    
+}
+@mixin footer-custom() {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        border-bottom: 2px solid black;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+}
+
+@mixin vertical-header() {
+    background-color: white;
+
+}
+
+.card-one {
+    @include card;
+}
+.btn-login {
+    @include btn-bg;
+}
+
+.vertical-header {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+    }
+    li {
+        float: left;
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+    }
+    
+}
+
+.custom-footer {
+    @include footer-custom;
+}
